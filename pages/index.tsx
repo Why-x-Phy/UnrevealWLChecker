@@ -39,17 +39,17 @@ const Home: NextPage = () => {
     setLoading(true);
 
     try {
-      const data = await contract?.erc721.claimConditions.getClaimerProofs(
+      const data = await contract?.claimConditions.getClaimerProofs(
         walletAddress
       );
 
       if (data) {
-        setMessage(`You can claim ${data.maxClaimable} NFTs!`);
+        setMessage(`You can buy ${data.maxClaimable} $CULT!`);
       } else {
-        setMessage("You can't claim any NFTs!");
+        setMessage("You can't buy any $CULT!");
       }
     } catch (e) {
-      setMessage("You can't claim any NFTs!");
+      setMessage("You can't buy any $CULT!");
     } finally {
       setLoading(false);
     }
