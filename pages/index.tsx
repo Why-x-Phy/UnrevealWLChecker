@@ -18,6 +18,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useContext, useState } from "react";
 import ChainContext from "../Context/Chain";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   const router = useRouter();
@@ -56,10 +57,11 @@ const Home: NextPage = () => {
   };
 
   return (
-    <VStack bg="#0f1318" minH="100vh" justify="center">
+    <VStack bg= "opacity" minH="100vh" justify="center">
       <Flex flexDir="column" gap={4}>
-        <Heading color="gray.100">Whitelist checker!</Heading>
-
+      <h2 className={styles.new}>
+        <Heading >$CULT Whitelist checker! </Heading>
+        </h2>
         {!address && (
           <Flex flexDir="column" gap={1}>
             <Text color="gray.100">Contract Address: </Text>

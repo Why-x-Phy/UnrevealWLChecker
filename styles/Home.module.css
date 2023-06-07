@@ -1,0 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Righteous);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.new {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #c2c298;
+    
+  }
